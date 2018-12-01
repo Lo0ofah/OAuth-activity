@@ -1,0 +1,7 @@
+<html><body>
+  	{% include "header.html" %}
+<form method ='POST' enctype='multipart/form-data' action ="{{url_for('editStartup',startup_id=startup.id)}}">
+<input type='text' name='name' value={{startup.name}} />
+<button type='submit'> edit </button>
+</form>
+</body></html>

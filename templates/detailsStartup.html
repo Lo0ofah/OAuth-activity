@@ -1,0 +1,20 @@
+<html><body>
+  	{% include "header.html" %}
+<a href="{{url_for('newFounder', startup_id = startup.id)}}">create founder!</a>
+<br>
+{{startup.name}}
+{% if founders %}
+{% for founder in founders %}
+<br>
+name:{{founder.name}}
+<br>
+bio: {{founder.bio}}
+<br>
+<a href="{{url_for('editFounder',startup_id=startup.id, founder_id = founder.id)}}"> edit</a>
+<a href="{{url_for('deleteFounder',startup_id=startup.id, founder_id = founder.id)}}"> delete </a>
+
+<br><br><br>
+{% endfor %}
+{% endif %}
+
+</body></html>

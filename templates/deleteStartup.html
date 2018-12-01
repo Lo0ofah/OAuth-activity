@@ -1,0 +1,6 @@
+<html><body>
+  	{% include "header.html" %}
+<form method ='POST' enctype='multipart/form-data' action ="{{url_for('deleteStartup',startup_id=startup.id)}}">
+<label>{{startup.name}}</label>
+<button type='submit'> delete </button>
+</form></body></html>

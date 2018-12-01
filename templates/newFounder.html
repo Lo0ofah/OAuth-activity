@@ -1,0 +1,7 @@
+<html><body>
+  	{% include "header.html" %}
+<form method ='POST' enctype='multipart/form-data' action ="{{url_for('newFounder' , startup_id = startup.id)}}">
+<input type='text' name='name' placeholder='name'/>
+<input type='text' name='bio' placeholder='bio'/>
+<button type='submit'> create founder! </button>
+</form></body></html>

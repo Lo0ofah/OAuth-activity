@@ -1,0 +1,11 @@
+<html>
+<body>
+  	{% include "header.html" %}
+<a href="{{url_for('newStartup')}}">create startup!</a>
+<br>
+  {% for startup in startups %}
+<br>
+<a href="{{url_for('detailsStartup',startup_id=startup.id)}}">{{startup.name}}</a>
+<br><br>
+{% endfor %}
+</body></html>

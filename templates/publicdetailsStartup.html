@@ -1,0 +1,15 @@
+<html><body>
+  	{% include "header.html" %}
+<br>
+{{startup.name}}
+{% if founders %}
+{% for founder in founders %}
+<br>
+name:{{founder.name}}
+<br>
+bio: {{founder.bio}}
+<br><br>
+{% endfor %}
+{% endif %}
+
+</body></html>
